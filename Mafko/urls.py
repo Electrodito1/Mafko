@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cars import views
-from cars.views import *
+from RgtEstd import views
+from RgtEstd.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Index.as_view(),name='index'),
     path('formulario',Formulario1.as_view(),name='formulario'),
-path('lista',ListaF.as_view(),name='lista'),
+    path('lista',ListaF.as_view(),name='lista'),
     path('consulta/<str:pk>/',ModificarF.as_view(),name="consulta"),
     path('eliminar/<str:pk>/', DeleteR.as_view(), name="eliminar"),
 ]

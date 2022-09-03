@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from django.views.generic import DetailView
 from django.views.generic.list import ListView
-from cars.models import *
+from RgtEstd.models import *
 from django.urls import reverse_lazy
 
 

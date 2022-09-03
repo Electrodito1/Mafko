@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATICFILES_DIRS=['C:/Users/Alex y Luis/PycharmProjects/Mafko2.0/Mafko/RgtEstd/Templates/static']
+STATICFILES_DIRS=['C:/Users/Alex y Luis/PycharmProjects/Mafko/RgtEstd/Templates/static']
 
 
 # Application definition
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'Mafko.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'cars/templates/pages')],  # ruta de paginas
+        'DIRS': [os.path.join(BASE_DIR, 'RgtEstd/templates/pages')],  # ruta de paginas
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Mafko.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'proyecto123',
+        'NAME': 'registro',
         'USER':'root',
         'PASSWORD':'1234',
         'HOST':'localhost',
