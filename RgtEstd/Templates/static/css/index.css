@@ -4,7 +4,7 @@
 }
 
 html{
-	background:url('../img/bg_tile.jpg') #333d43;
+	background:url('../img/bg_tile.jpg') #00d24a;
 
 }
 
@@ -33,11 +33,11 @@ body{
 	/* Specifying a fallback color and we define CSS3 gradients for the major browsers: */
 
 	background-color: #f0f0f0;
-	background-image: -webkit-gradient(linear,left top, left bottom,from(#fefefe), color-stop(0.5,#f0f0f0), color-stop(0.51, #e6e6e6));
-	background-image: -moz-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
-	background-image: -o-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
-	background-image: -ms-linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
-	background-image: linear-gradient(#fefefe 0%, #f0f0f0 50%, #e6e6e6 51%);
+	background-image: -webkit-gradient(linear,left top, left bottom,from(#ff0000), color-stop(0.5,#ed0000), color-stop(0.51, #e6e6e6));
+	background-image: -moz-linear-gradient(#11ff00 0%, #179b00 50%, #000000 51%);
+	background-image: -o-linear-gradient(#11ff00 0%, #11ff0050, #000000 51%);
+	background-image: -ms-linear-gradient(#11ff00 0%, #11ff00 50%, #000000 51%);
+	background-image: linear-gradient(#002408 0%, #00e04b 50%, #0a5808 51%);
 
 	border-right: 1px solid rgba(9, 9, 9, 0.125);
 
@@ -70,17 +70,17 @@ body{
 
 	/* Gradients! */
 
-	background-image:-webkit-gradient(linear, left top, right top, from(rgba(168,168,168,0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
-	background-image:-moz-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
-	background-image:-o-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
-	background-image:-ms-linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
-	background-image:linear-gradient(left, rgba(168,168,168,0.5), rgba(168,168,168,0) 50%, rgba(168,168,168,0.5));
+	background-image:-webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)),color-stop(0.5,rgba(168,168,168,0)), to(rgba(168,168,168,0.5)));
+	background-image:-moz-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(168,168,168,0) 50%, rgba(0, 0, 0, 0.5));
+	background-image:-o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(168,168,168,0) 50%, rgba(0, 0, 0, 0.5));
+	background-image:-ms-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(168,168,168,0) 50%, rgba(0, 0, 0, 0.5));
+	background-image:linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(168,168,168,0) 50%, rgba(0, 0, 0, 0.5));
 
 	/* Creating borders with box-shadow. Useful, as they don't affect the size of the element. */
 
-	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
-	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
-	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff,1px 0 0 #a3a3a3,2px 0 0 #fff;
+	box-shadow:-1px 0 0 #000000,-2px 0 0 rgb(0, 0, 0),1px 0 0 #000000,2px 0 0 rgb(0, 0, 0);
+	-moz-box-shadow:-1px 0 0 #000000,-2px 0 0 rgb(0, 0, 0),1px 0 0 #000000,2px 0 0 rgb(0, 0, 0);
+	-webkit-box-shadow:-1px 0 0 #000000,-2px 0 0 rgb(0, 0, 0),1px 0 0 #000000,2px 0 0 rgb(0, 0, 0);
 
 	/* This will create a smooth transition for the opacity property */
 
@@ -98,9 +98,9 @@ body{
 
 .fancyNav li:first-child:after,
 .fancyNav li.selected:first-child:after{
-	box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
-	-moz-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
-	-webkit-box-shadow:1px 0 0 #a3a3a3,2px 0 0 #fff;
+	box-shadow:1px 0 0 #000000,2px 0 0 rgb(0, 0, 0);
+	-moz-box-shadow:1px 0 0 #000000,2px 0 0 rgb(0, 0, 0);
+	-webkit-box-shadow:1px 0 0 #000000,2px 0 0 rgb(0, 0, 0);
 
 	border-radius:4px 0 0 4px;
 }
@@ -113,9 +113,9 @@ body{
 
 .fancyNav li:last-child:after,
 .fancyNav li.selected:last-child:after{
-	box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
-	-moz-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
-	-webkit-box-shadow:-1px 0 0 #a3a3a3,-2px 0 0 #fff;
+	box-shadow:-1px 0 0 #000000,-2px 0 0 rgb(0, 0, 0);
+	-moz-box-shadow:-1px 0 0 #000000,-2px 0 0 rgb(0, 0, 0);
+	-webkit-box-shadow:-1px 0 0 #000000,-2px 0 0 rgb(0, 0, 0);
 
 	border-radius:0 4px 4px 0;
 }
@@ -141,12 +141,12 @@ body{
 /* Styling the anchor elements */
 
 .fancyNav li a{
-	color: #5d5d5d;
+	color: #000000;
 	display: inline-block;
 	font: 20px/1 Lobster,Arial,sans-serif;
 	padding: 12px 35px 14px;
 	position: relative;
-	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+	text-shadow: 1px 1px 0 rgb(11, 44, 0);
 	z-index:2;
 	text-decoration:none !important;
 	white-space:nowrap;
@@ -200,7 +200,7 @@ header{
 
 nav{
 	display: block;
-	margin: 100px auto 0;  // menu
+	margin: 100px auto 0;
 	text-align: center;
 	width: 800px;
 }
