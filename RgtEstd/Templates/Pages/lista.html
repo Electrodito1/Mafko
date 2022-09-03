@@ -1,0 +1,102 @@
+{% extends "menu.html" %}
+{% load static %}
+{% block title %} Lista {% endblock %}
+{% block secondNav %}
+<html>
+<head>
+    <title>Tabla</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/lista.css' %}">
+
+</head>
+<body>
+
+<form  method="POST">
+    <div class="datagrid">
+
+
+ </form >
+    <table id="tab">
+        <thead>
+        <tr>
+            <td>Usuario</td>
+            <td>Nombre</td>
+            <td>Correo</td>
+            <td>Telefono</td>
+            <td></td>
+            <td></td>
+
+
+        </tr>
+        </thead>
+        <tfoot>
+<tr>
+    <td colspan="4">
+        <div id="paging">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>Previous</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <span>1</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                    ><span>3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>Next</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+</tr>
+</tfoot>
+        <tbody>
+        {% for fact in object_list  %}
+        <tr>
+            <td>{{fact.usuario}}</td>
+            <td>{{fact.nombre}}</td>
+            <td>{{fact.correo}}</td>
+            <td>{{fact.telefono}}</td>
+
+            <td><a href="{% url 'consulta' fact.usuario %}">Modificar</a></td>
+            <td><a href="{% url 'eliminar' fact.usuario %}">Eliminar</a></td>
+
+        </tr>
+
+
+
+          {% endfor %}
+
+        </tbody>
+    </table>
+
+</div>
+
+
+</body>
+</html>
+
+{% endblock %}
