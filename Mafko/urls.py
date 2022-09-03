@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from cars import views
+from cars.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('',Index.as_view(),name='index'),
+    path('formulario',Formulario1.as_view(),name='formulario'),]
