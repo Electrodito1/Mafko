@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/index.css' %} " rel="stylesheet"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster"/>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+<html>
+<body>
+<header>
+    <h1>Django Programacion Visual 3F</h1>
+    <h2><a>&laquo; Read and download on Tutorialzine</a></h2>
+</header>
+<div align="center" >
+    <nav>
+        <ul class="fancyNav">
+            <li id="home"><a href="{% url 'index' %} " class="homeIcon">Home</a></li>
+            <li id="news"><a href="{% url 'formulario' %} ">Formulario</a></li>
+            <li id="about"><a href="{% url 'lista' %}">Lista</a></li>
+            <li id="services"><a href="#services">About</a></li>
+            <li id="contact"><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+</div>
+    {% block secondNav %}{% endblock %}
+
+
+<footer>Proyecto desarrollado en clase de programacion <b>To download the source code, visit <a
+        href="http://tutorialzine.com/2011/05/css3-animated-navigation-menu/">Tutorialzine.com</a></b></footer>
+</body>
+</html>
