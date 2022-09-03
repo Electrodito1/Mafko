@@ -18,3 +18,18 @@ class Formulario1(CreateView):
     fields = ['usuario', 'nombre', 'password','password2','correo','telefono']
     template_name = "formulario.html"
     success_url = reverse_lazy("index")
+
+class ListaF(ListView):
+    model = Formulario
+    template_name = "lista.html"
+
+class ModificarF(UpdateView):
+    model = Formulario
+    fields = [ 'nombre', 'password','password2','correo','telefono','usuario']
+    template_name = "consulta.html"
+    success_url = reverse_lazy("index")
+
+class DeleteR(DeleteView):
+    model = Formulario
+    template_name = "eliminar.html"
+    success_url = reverse_lazy("index")
