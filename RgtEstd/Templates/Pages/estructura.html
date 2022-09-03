@@ -7,13 +7,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Modificar Formulario </title>
+	<title> Eliminar Formulario  </title>
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'css/formulario.css' %}">
 </head>
 
 <body>
+
 
 	<main>
 
@@ -23,7 +24,7 @@
 			<div class="formulario_grupo" id="grupo_usuario">
 				<label for="usuario" class="formulario__label">Usuario</label>
 				<div class="formulario__grupo-input">
-					<input value="{{ object.usuario }}" type="text" class="formulario__input" name="usuario" id="usuario" placeholder="User">
+					<input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="User">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -33,7 +34,7 @@
 			<div class="formulario_grupo" id="grupo_nombre">
 				<label for="nombre" class="formulario__label">Nombre</label>
 				<div class="formulario__grupo-input">
-					<input value="{{ object.nombre }}" type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Name">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Name">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -43,7 +44,7 @@
 			<div class="formulario_grupo" id="grupo_password">
 				<label for="password" class="formulario__label">Contraseña</label>
 				<div class="formulario__grupo-input">
-					<input value="{{ object.password }}" type="password" class="formulario__input" name="password" id="password">
+					<input type="password" class="formulario__input" name="password" id="password">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
@@ -53,7 +54,7 @@
 			<div class="formulario_grupo" id="grupo_password2">
 				<label for="password2" class="formulario__label">Repetir Contraseña</label>
 				<div class="formulario__grupo-input">
-					<input value="{{ object.password2 }}" type="password" class="formulario__input" name="password2" id="password2">
+					<input type="password" class="formulario__input" name="password2" id="password2">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
@@ -63,7 +64,7 @@
 			<div class="formulario_grupo" id="grupo_correo">
 				<label for="correo" class="formulario__label">Correo Electrónico</label>
 				<div class="formulario__grupo-input">
-					<input value="{{ object.correo }}" type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
@@ -73,7 +74,7 @@
 			<div class="formulario_grupo" id="grupo_telefono">
 				<label for="telefono" class="formulario__label">Teléfono</label>
 				<div class="formulario__grupo-input">
-					<input value="{{ object.telefono }}" type="text" class="formulario__input" name="telefono" id="telefono" placeholder="0900000000">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="0900000000">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 10 dígitos.</p>
@@ -94,6 +95,5 @@
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
 
 {% endblock %}
