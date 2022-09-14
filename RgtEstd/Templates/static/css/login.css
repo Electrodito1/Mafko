@@ -1,0 +1,80 @@
+body{
+    background: rgb(10,163,7);
+    background: linear-gradient(0deg, rgba(10,163,7,1) 22%, rgba(255,255,255,1) 100%);
+    border_radius 10px black;
+
+}
+
+
+/* Bordered form */
+form {
+	max-width: 550px;
+	width: 100%;
+	margin: auto;
+	padding: 12%;
+
+
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+
+
+}
+
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  border: 2px solid black;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */

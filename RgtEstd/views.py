@@ -6,6 +6,7 @@ from django.views.generic.edit import CreateView,UpdateView,DeleteView
 from django.views.generic import DetailView
 from django.views.generic.list import ListView
 from RgtEstd.models import *
+from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 
 
@@ -33,3 +34,9 @@ class DeleteR(DeleteView):
     model = Formulario
     template_name = "eliminar.html"
     success_url = reverse_lazy("index")
+
+
+
+
+class Login (LoginView):
+    template_name = "login.html"
