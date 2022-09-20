@@ -1,17 +1,14 @@
-import django.views.generic
-from django.shortcuts import render
-from datetime import datetime
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
-from django.views.generic import DetailView
 from django.views.generic.list import ListView
 from RgtEstd.models import *
-from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
+from RgtEstd.archivos.archivos import *
+from django.shortcuts import render, redirect
 
 
 
-class Index(TemplateView):
+class Index_P(TemplateView):
     template_name = "index.html"
 
 class Formulario1(CreateView):
@@ -35,8 +32,22 @@ class DeleteR(DeleteView):
     template_name = "eliminar.html"
     success_url = reverse_lazy("index")
 
+def index(request):
+    template = "index.html"
+    context = {}
+    return render(request,template,context)
 
+def login(request):
+    ruta = "C:/Users/Alex y Luis/PycharmProjects/Mafko/datos.txt"
+    usu = request.POST.get('user')
+    pas = request.POST.get('password')
+    print(usu,pas)
+    arch = Archivo()
+    obj = arch.getLogin(usu,pas,ruta)
+    print(ruta,obj)
+    if obj==None:
+        return render(request, "login.html")
+    else:
+        if obj.usuario == usu :
+            return render(request, "index.html")
 
-
-class Login (LoginView):
-    template_name = "login.html"
